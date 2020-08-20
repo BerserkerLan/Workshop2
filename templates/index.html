@@ -3,16 +3,23 @@
 
 {% block content %}
   <div class="jumbotron">
-    <h1 class="display-4">To-Do App</h1>
-    <p class="lead">Just another to-do app.</p>
+    <h1 class="display-4">Bus Station</h1>
+    <p class="lead">Bus Station Finder</p>
   </div>
 
   <div class="row">
     <div class="col-md-12">
       <h2>Items</h2>
-      <ul class="list-group mb-4">
-        <!-- List the todo items here -->
+      <ul class="list-group mb-4">      
       </ul>
+      <form action="/findByPostcode" method="GET">
+        <input type="text" id="postcode" name="postcode" required
+        minlength="4" maxlength="8" size="10">
+        <button class="favorite styled" onclick=""
+        type="submit">
+          Find Station
+        </button>
+      </form>
     </div>
   </div>
 {% endblock %}
